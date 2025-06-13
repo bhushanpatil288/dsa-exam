@@ -45,7 +45,7 @@ int main(){
     cout << "Please Enter the column number you want to sum: ";
     cin >> user_choice;
     // validation
-    if (user_choice < 1 || user_choice > row){
+    if (user_choice < 1 || user_choice > col){
         cout << "Please Enter valid range";
         return 1;
     }

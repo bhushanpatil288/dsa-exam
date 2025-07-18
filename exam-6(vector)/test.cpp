@@ -32,7 +32,7 @@ class GroceryProduct{
 };
 
 int main(){
-    cout << "Grocery Product Invetory Sytem\n";
+    cout << "\n\n            Grocery Product Invetory Sytem\n";
     vector<GroceryProduct> inventory;
 
     int choice;

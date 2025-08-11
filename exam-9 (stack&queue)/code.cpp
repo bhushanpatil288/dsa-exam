@@ -57,11 +57,15 @@ void Stack::pop(){
     }
     cout << "\n-----------------------------\n";
     cout << "Popped element: " << this->arr[this->top];
+    if (this->arr[this->top] == secLargest || this->arr[this->top] == largest){
+        this->largest = 0;
+        this->secLargest = 0;
+    }
     cout << "\n-----------------------------\n";
     this->arr[this->top] = 0;
-    this->calculateSecondLargestOnPop();
     this->top--;
     this->count--;
+    this->calculateSecondLargestOnPop();
 }
 
 int Stack::getTop(){
@@ -126,7 +130,10 @@ int Stack::getSize(){
 }
 
 int main(){
-    Stack s(3);
+    int size;
+    cout << "Enter the size of stack: ";
+    cin >> size;
+    Stack s(size);
     int choice;
     do {
         cout << "\n\n1. Push an element in stack\n";
